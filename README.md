@@ -101,8 +101,8 @@ Through these labs, I aim to:
 
 ## 👤 Author
 
-**Name:** [Your Name]  
+**Name:** Horn Sovisal
 **Major:** Bachelor of Engineering – Telecommunications & Networking  
-**Specialization:** Cybersecurity  
+**Specialization:** Cyber Security  
 **Institution:** Cambodia Academy of Digital Technology (CADT)
 
