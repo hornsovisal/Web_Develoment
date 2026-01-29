@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CADT NextGen</title>
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #020f27;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 10px 20px;
+      }
+      .logo img {
+        height: 50px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        margin-left: 30px;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .login-register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        gap: 50px;
+      }
+
+      .login-register-container {
+        display: flex;
+        justify-self: center;
+        padding: 10px;
+      }
+      .info-card {
+        color: white;
+        max-width: 400px;
+      }
+      .login-register-card {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+      }
+
+      .login-register-card form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .login-register-card input {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .login-register-card button {
+        background-color: #f4b400;
+        color: black;
+        font-weight: 520;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .login-register-card button:hover {
+        background-color: #e2a200;
+        cursor: pointer;
+      }
+
+      .login-register-card .SSO {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .login-register-card .SSO button {
+        display: flex;
+        align-items: center;
+        border: 3px solid #000000;
+        gap: 10px;
+        justify-content: center;
+        background-color: white;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+      }
+
+      .login-register-card .SSO button:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+
+      .login-register-card .SSO button img {
+        height: 20px;
+        width: 20px;
+      }
+    </style>
+  </head>
+  <header>
+    <div class="logo">
+      <img src="img/nextgen.jpg" alt="CADT NextGen Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login_register.html">Login/Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="login-register-container">
+      <div class="info-card">
+        <h1>Learn data and AI skills</h1>
+        <p>
+          Master in-demand skills in C++, Web Development, and more through
+          interactive courses and real-world projects
+        </p>
+      </div>
+
+      <div class="login-register-card">
+        <h2>Create Your Free Account</h2>
+        <div class="SSO">
+          <button type="button">
+            <img src="img/google-logo.jpg" alt="Google Logo" /> Sign up with
+            Google
+          </button>
+          <button type="button">
+            <img src="img/github-logo.svg" alt="GitHub Logo" /> Sign Up with
+            GitHub
+          </button>
+        </div>
+        <form action="#" method="post">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">Start Learning for Free</button>
+
+          <a href="register.html" style="font-size: 13px">Don't Have Account? Register</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

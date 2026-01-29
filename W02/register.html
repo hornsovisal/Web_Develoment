@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextGen Register</title>
+
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica",
+          "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0d1117;
+      }
+
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 40px 20px;
+      }
+
+      .info-card {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        max-width: 450px;
+      }
+
+      .info-card .logo img {
+        margin-bottom: 30px;
+        width: 150px;
+        height: 150px;
+        /* logo to center */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .info-card h2 {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .info-card p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #8b949e;
+      }
+
+      .register-card {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .register-card h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .SSO {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .SSO button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #f6f8fa;
+        border: 1px solid #d0d7de;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .SSO button:hover {
+        background-color: #f3f4f6;
+        border-color: #1b1f2326;
+      }
+
+      .SSO button img {
+        height: 20px;
+        width: 20px;
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+        color: #656d76;
+        font-size: 14px;
+      }
+
+      .register-card form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .register-card label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: -10px;
+      }
+
+      .register-card input,
+      .register-card select {
+        border: 1px solid #d0d7de;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 14px;
+        transition: border-color 0.2s;
+        font-family: inherit;
+      }
+
+      .fullname {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .fullname .field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .register-card button[type="submit"] {
+        background-color: #020f27;
+        color: white;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .register-card button[type="submit"]:hover {
+        background-color: #f4b400;
+      }
+
+      .signin-link {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+
+      .signin-link a {
+        color: f4b400;
+      }
+
+      .signin-link a:hover {
+        text-decoration: underline;
+      }
+
+      .input-programming-language label {
+        margin: 0;
+      }
+      input-programming-language {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .input-programming-language {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="info-card">
+        <div class="logo">
+          <img src="img/nextgen.jpg" alt="Next Gen Image" />
+        </div>
+        <div class="info">
+          <h2>Create your free account</h2>
+          <p>
+            Join Next gen enganment program where you can learn core course to
+            prepare for year 2 .
+          </p>
+        </div>
+      </div>
+
+      <div class="register-card">
+        <h2>Sign up for NextGen</h2>
+
+        <div class="SSO">
+          <button type="button">
+            <img src="img/google-logo.jpg" alt="Google Logo" /> Continue with
+            Google
+          </button>
+          <button type="button">
+            <img src="img/github-logo.svg" alt="GitHub Logo" /> Continue with
+            GitHub
+          </button>
+        </div>
+
+        <form action="#" method="post">
+          <div class="fullname">
+            <div class="field">
+              <div class="label">
+                <label for="fname">First Name </label> <br />
+              </div>
+
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="field">
+              <div class="label">
+                <label for="lname">Last Name </label> <br />
+              </div>
+              <div class="input">
+                <input
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label"><label for="email">Email </label></div>
+            <div class="input">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="password">Password </label>
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="confirm_password">Confirm Password </label>
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                placeholder="Confirm Password"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="province">Province </label>
+            </div>
+            <div class="input">
+              <select id="province" name="province" required>
+                <option value="">-- Select Province --</option>
+                <option value="Kandal">Kandal</option>
+                <option value="Phnom Penh">Phnom Penh</option>
+                <option value="Siem Reap">Siem Reap</option>
+                <option value="Battambang">Battambang</option>
+                <option value="Kampong Cham">Kampong Cham</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="dateofbirth">Date of Birth </label>
+            </div>
+            <div class="input">
+              <input type="date" id="dateofbirth" name="dateofbirth" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label>Preferred Programming Language</label>
+            </div>
+            <div class="input-programming-language">
+              <div>
+                <input
+                  type="checkbox"
+                  id="cpp"
+                  name="programming-language"
+                  value="C++"
+                />
+                <label for="cpp" style="margin: 0"> C++ </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="webdev"
+                  name="programming-language"
+                  value="Web Development"
+                />
+                <label for="webdev" style="margin: 0"> Web Development </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="python"
+                  name="programming-language"
+                  value="Python"
+                />
+                <label for="python"> Python </label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">Create account</button>
+
+          <p class="signin-link">
+            Already have an account? <a href="login_register.html">Sign in →</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
