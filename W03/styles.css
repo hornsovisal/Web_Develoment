@@ -197,10 +197,19 @@ nav ul li a:hover {
 
 /* i want footer to stick to bottom of page */
 footer {
-  text-align: center;
-  padding: 10px 0;
-  color: white;
-  top: auto;
+  position: fixed;
   bottom: 0;
-  margin-left: 15px;
+  font-size: 12px;
+  width: 100%;
+  height: 50px;
+  margin: 0px !important;
+  position: fixed;
+  padding: 0px;
+  background-color: #fbfbfb;
+}
+
+footer p {
+  text-align: center;
+  color: #020f27;
+  padding: 10px 0;
 }
