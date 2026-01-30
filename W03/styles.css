@@ -108,12 +108,22 @@ nav ul li a:hover {
   .course-item p {
     font-size: 13px;
   }
+  .course-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px goldenrod;
+    border-color: #ff6600;
+  }
 }
 
 /* iPhone and small mobile devices */
 @media (max-width: 480px) {
   header {
     padding: 10px;
+  }
+  .course-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px goldenrod;
+    border-color: #ff6600;
   }
 
   .logo img {
