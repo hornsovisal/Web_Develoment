@@ -4,223 +4,526 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Next Gen</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"> </script>
-   </head>
-   <header>
-    <nav class="flex justify-between items-center p-4 bg-white shadow-md w-full" style="font-family: 'Poppins', sans-serif; font-size: 16px;">
-      <div class="flex justify-between items-center w-full px-25">
-        <a class="brand flex items-center gap-2" href="#">
-          <img src="../img/nextgen.jpg" alt="Next Gen" width="50" height="50" class="rounded" />
-          <span class="text-xl font-semibold text-gray-800">Next Gen </span>
-        </a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-        <ul class="flex justify-center items-center gap-12 text-gray-700 font-medium">
-          <li><a href="#" class="hover:text-amber-500 hover:underline cursor-pointer">Home</a><span class="text-xs">▼</span></a></li></li>
-          <li><a href="#" class="hover:text-amber-500 hover:underline cursor-pointer">Courses</a><span class="text-xs">▼</span></a></li></li>
-          <li><a href="#" class="hover:text-amber-500 hover:underline cursor-pointer">Blog</a><span class="text-xs">▼</span></a></li></li>
-          <li><a href="#" class="hover:text-amber-500 hover:underline cursor-pointer">Shop</a><span class="text-xs">▼</span></a></li></li>
-          <li><a href="#" class="hover:text-amber-500 hover:underline cursor-pointer">Pages</a><span class="text-xs">▼</span></a></li></li>
-          <li><a href="#" class="hover:text-amber-500 hover:underline cursor-pointer">Events</a><span class="text-xs">▼</span></a></li></li>
-        </ul>
+  <body>
+    <header>
+      <nav
+        class="bg-white shadow-md w-full"
+        style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 16px"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <!-- Left: Brand -->
+            <a class="flex items-center gap-2" href="#">
+              <img
+                src="../img/nextgen.jpg"
+                alt="Next Gen"
+                class="h-10 w-10 rounded"
+              />
+              <span class="text-lg sm:text-xl font-semibold text-gray-800"
+                >Next Gen</span
+              >
+            </a>
 
+            <!-- Desktop Menu -->
+            <ul
+              class="hidden md:flex items-center gap-8 text-gray-700 font-medium"
+            >
+              <li>
+                <a href="#" class="hover:text-amber-500 hover:underline">Home</a
+                ><span class="text-xs">▼</span>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-500 hover:underline"
+                  >Courses</a
+                ><span class="text-xs">▼</span>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-500 hover:underline">Blog</a
+                ><span class="text-xs">▼</span>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-500 hover:underline">Shop</a
+                ><span class="text-xs">▼</span>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-500 hover:underline"
+                  >Pages</a
+                ><span class="text-xs">▼</span>
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-500 hover:underline"
+                  >Events</a
+                ><span class="text-xs">▼</span>
+              </li>
+            </ul>
 
-        <!-- Right Side Icons and Buttons -->
-        <div class="flex items-center gap-6">
-          <!-- Icons -->
-          <div class="flex items-center gap-4 text-gray-600">
-            <button class="relative hover:text-amber-500 cursor-pointer" aria-label="Cart">
-              <span class="text-xl">🛒</span>
-              <span class="absolute -top-2 -right-2 bg-teal-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
-            </button>
-            <button class="hover:text-amber-500 cursor-pointer" aria-label="Account">
-              <span class="text-xl">👤</span>
-            </button>
-            <button class="hover:text-amber-500 cursor-pointer" aria-label="Search">
-              <span class="text-xl">🔍</span>
+            <!-- Right: Desktop actions -->
+            <div class="hidden md:flex items-center gap-6">
+              <!-- Icons -->
+              <div class="flex items-center gap-4 text-gray-600">
+                <button class="relative hover:text-amber-500" aria-label="Cart">
+                  <span class="text-xl">🛒</span>
+                  <span
+                    class="absolute -top-2 -right-2 bg-teal-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                    >2</span
+                  >
+                </button>
+                <button class="hover:text-amber-500" aria-label="Account">
+                  <span class="text-xl">👤</span>
+                </button>
+                <button class="hover:text-amber-500" aria-label="Search">
+                  <span class="text-xl">🔍</span>
+                </button>
+              </div>
+
+              <a class="text-gray-700 hover:text-amber-500 font-medium" href="#"
+                >Login</a
+              >
+              <a
+                class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-yellow-700 font-medium"
+                href="#"
+                >Signup</a
+              >
+            </div>
+
+            <!-- Mobile: Hamburger -->
+            <button
+              class="md:hidden p-2 rounded hover:bg-gray-100"
+              aria-label="Open menu"
+            >
+              <span class="text-2xl">☰</span>
             </button>
           </div>
-          
-         <!-- Login and Signup -->
-          <a class="text-gray-700 hover:text-amber-500 cursor-pointer font-medium" href="#">Login</a>
-          <a class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-yellow-700 cursor-pointer font-medium" href="#">Signup</a>
-        </div>
-      </div>
-    </nav>
-   </header>
 
-  <body class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-blue-600 font-['Poppins'] m-0">
+          <!-- Mobile Menu (static version, no JS) -->
+          <div class="md:hidden border-t py-3">
+            <ul class="flex flex-col gap-3 text-gray-700 font-medium">
+              <li><a href="#" class="hover:text-amber-500">Home</a></li>
+              <li><a href="#" class="hover:text-amber-500">Courses</a></li>
+              <li><a href="#" class="hover:text-amber-500">Blog</a></li>
+              <li><a href="#" class="hover:text-amber-500">Shop</a></li>
+              <li><a href="#" class="hover:text-amber-500">Pages</a></li>
+              <li><a href="#" class="hover:text-amber-500">Events</a></li>
+            </ul>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="flex items-center gap-4 text-gray-600">
+                <button class="relative hover:text-amber-500" aria-label="Cart">
+                  <span class="text-xl">🛒</span>
+                  <span
+                    class="absolute -top-2 -right-2 bg-teal-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                    >2</span
+                  >
+                </button>
+                <button class="hover:text-amber-500" aria-label="Account">
+                  <span class="text-xl">👤</span>
+                </button>
+                <button class="hover:text-amber-500" aria-label="Search">
+                  <span class="text-xl">🔍</span>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <a
+                  class="text-gray-700 hover:text-amber-500 font-medium"
+                  href="#"
+                  >Login</a
+                >
+                <a
+                  class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 font-medium"
+                  href="#"
+                  >Signup</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <!-- Hero Section -->
-    <div class="max-w-7xl mx-auto px-12 py-20 ">
-      <div class="flex flex-col lg:flex-row gap-10 items-center text-white">
-        <!-- Left Content -->
-        <div class="flex flex-col gap-5 max-w-1-xl ml:-20">
-          <p class="text-xs  text-indigo-200 uppercase">NEXT GEN LEARNING PLATFORM</p>
-          <h1 class="text-4xl md:text-5-l font-bold leading-tight">
-            Master <span class="text-cyan-300">in-demand skills</span> in  <span class="text-yellow-300">C++, Web Development </span><br>and more
-          </h1>
-          <p class="text-lg text-white/90">Interactive courses and real-world projects. Learn web development, intro to cyber, DBMS, CCNA and more through hands-on experience.</p>
-          
-          <div class="flex gap-3 items-center">
-            <button class="border-2 border-white text-white px-6 py-3 bg-transparent rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition">View Courses</button>
-            <a href="#" class="text-white font-semibold hover:text-cyan-300">Get Free Consultation</a>
+    <section
+      class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-blue-600 font-['Poppins'] pt-10 pb-20"
+    >
+      <div class="max-w-7xl mx-auto px-6 md:px-12 py-14 md:py-20">
+        <div class="flex flex-col lg:flex-row gap-10 items-center text-white">
+          <!-- Left Content -->
+          <div class="flex flex-col gap-5 max-w-xl">
+            <p class="text-xs text-indigo-200 uppercase">
+              NEXT GEN LEARNING PLATFORM
+            </p>
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
+            >
+              Master <span class="text-cyan-300">in-demand skills</span> in
+              <span class="text-yellow-300">C++, Web Development </span
+              ><br />and more
+            </h1>
+            <p class="text-base sm:text-lg text-white/90">
+              Interactive courses and real-world projects. Learn web
+              development, intro to cyber, DBMS, CCNA and more through hands-on
+              experience.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
+              <button
+                class="border-2 border-white text-white px-6 py-3 bg-transparent rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition"
+              >
+                View Courses
+              </button>
+              <a href="#" class="text-white font-semibold hover:text-cyan-300"
+                >Get Free Consultation</a
+              >
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row gap-2 bg-white/11 border border-white/20 rounded-lg p-3 max-w-md"
+            >
+              <input
+                type="text"
+                placeholder="What do you want to learn today?"
+                class="bg-transparent text-white placeholder:text-white/70 outline-none px-4 py-2 flex-1 border-none"
+              />
+              <button
+                class="bg-indigo-600 hover:bg-indigo-500 text-white px-2 py-2 rounded-md font-semibold"
+              >
+                Search
+              </button>
+            </div>
           </div>
 
-          <div class="flex gap-2 bg-white/11 border border-white/20 rounded-lg p-3 max-w-md">
-            <input type="text" placeholder="What do you want to learn today?" class="bg-transparent text-white placeholder:text-white/70 outline-none px-4 py-2 flex-1 border-none" />
-            <button class="bg-indigo-600 hover:bg-indigo-500 text-white px-2 py-2 rounded-md font-semibold">Search</button>
-          </div>
-        </div>
-
-        <!-- Right Content - Image & Testimonial -->
-        <div class="flex justify-center">
-          <!-- Testimonial Card -->
-          <div class="absolute top-60  left-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 w-80 z-10">
-            <p class="font-semibold text-white mb-2">Horn Sovisal - Student</p>
-            <p class="text-sm text-white/80 mb-3">The courses here helped me master web development and C++. Amazing hands-on projects that prepare you for real-world work!</p>
-            <p class="text-cyan-300 text-sm">5.0 ★★★★★</p>
-          </div>
-          <div>
-            <img src="img/people1.png" alt="Student" width="100%" height="auto" class="ml-100" />
+          <!-- Right Content - Image & Testimonial -->
+          <div
+            class="flex justify-center w-full lg:w-1/2 relative mt-6 lg:mt-0"
+          >
+            <!-- Testimonial Card -->
+            <div
+              class="absolute top-10 left-auto right-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 w-80 z-10"
+            >
+              <p class="font-semibold text-white mb-2">
+                Horn Sovisal - Student
+              </p>
+              <p class="text-sm text-white/80 mb-3">
+                The courses here helped me master web development and C++.
+                Amazing hands-on projects that prepare you for real-world work!
+              </p>
+              <p class="text-cyan-300 text-sm">5.0 ★★★★★</p>
+            </div>
+            <div>
+              <img
+                src="img/people1.png"
+                alt="Student"
+                class="w-full h-auto max-w-md lg:max-w-lg xl:max-w-xl"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Brands Section -->
     <section class="bg-gradient-to-r from-indigo-700 to-blue-500 py-8">
-      <div class="max-w-7xl mx-auto px-11">
-        <div class="grid grid-cols-6 gap-7 items-center">
-          <img src="./img/amazon-logo.png" alt="Amazon" class="h-20 opacity-80 hover:opacity-100" />
-          <img src="./img/amd-logo.png" alt="AMD" class="h-20 opacity-80 hover:opacity-100" />
-          <img src="./img/cisco-logo.png" alt="Cisco" class="h-20 opacity-80 hover:opacity-100" />
-          <img src="./img/aws-logo.png" alt="aws" class="h-20 opacity-80 hover:opacity-100" />
-          <img src="./img/logitech-logo.png" alt="Logitech" class="h-20 opacity-80 hover:opacity-100" />
-          <img src="./img/spotify-logo.png" alt="Spotify" class="h-20 opacity-80 hover:opacity-100" />
+      <div class="max-w-7xl mx-auto px-6 md:px-11">
+        <div
+        class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-7 items-center justify-items-center"
+        >
+          <img
+            src="./img/amazon-logo.png"
+            alt="Amazon"
+            class="h-12 sm:h-16 md:h-20 opacity-80 hover:opacity-100"
+          />
+          <img
+            src="./img/amd-logo.png"
+            alt="AMD"
+            class="h-12 sm:h-16 md:h-20 opacity-80 hover:opacity-100"
+          />
+          <img
+            src="./img/cisco-logo.png"
+            alt="Cisco"
+            class="h-12 sm:h-16 md:h-20 opacity-80 hover:opacity-100"
+          />
+          <img
+            src="./img/aws-logo.png"
+            alt="aws"
+            class="h-12 sm:h-16 md:h-20 opacity-80 hover:opacity-100"
+          />
+          <img
+            src="./img/logitech-logo.png"
+            alt="Logitech"
+            class="h-12 sm:h-16 md:h-20 opacity-80 hover:opacity-100"
+          />
+          <img
+            src="./img/spotify-logo.png"
+            alt="Spotify"
+            class="h-12 sm:h-16 md:h-20 opacity-80 hover:opacity-100"
+          />
         </div>
       </div>
     </section>
 
     <section class="bg-gradient-to-b from-gray-50 to-white py-12 px-6">
-      <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Our Courses</h2>
+      <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">
+        Our Courses
+      </h2>
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-7">
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-orange-500 transition-all duration-300 overflow-hidden hover:shadow-amber-400 " style="box-shadow: 0 4px 6px rgba(0,0,0,0.1) ;">
-          <img src="../img/web_develop.avif" alt="Web Development" class="w-full h-64 object-cover"/>
+        <div
+          class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-orange-500 transition-all duration-300 overflow-hidden hover:shadow-amber-400"
+          style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)"
+        >
+          <img
+            src="../img/web_develop.avif"
+            alt="Web Development"
+            class="w-full h-48 sm:h-56 md:h-64 object-cover"
+          />
           <div class="p-6">
-          <h3 class="text-2xl font-bold text-gray-800 mb-3">Web Development</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Learn the fundamentals of web development including HTML, CSS, and
-            JavaScript to build responsive and interactive websites.
-          </p>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Web Development
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Learn the fundamentals of web development including HTML, CSS, and
+              JavaScript to build responsive and interactive websites.
+            </p>
           </div>
         </div>
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-orange-500 transition-all duration-300 overflow-hidden" style="box-shadow: 0 4px 6px rgba(0,0,0,0.1)">
-          <img src="../img/cybersecurity.png" alt="Cybersecurity" class="w-full h-64 object-cover"/>
+        <div
+          class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-orange-500 transition-all duration-300 overflow-hidden"
+          style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)"
+        >
+          <img
+            src="../img/cybersecurity.png"
+            alt="Cybersecurity"
+            class="w-full h-48 sm:h-56 md:h-64 object-cover"
+          />
           <div class="p-6">
-          <h3 class="text-2xl font-bold text-gray-800 mb-3">Intro to Cybersecurity</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Understand the principles of cybersecurity, including threat
-            detection, risk management, and ethical hacking to protect digital
-            assets.
-          </p>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Intro to Cybersecurity
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Understand the principles of cybersecurity, including threat
+              detection, risk management, and ethical hacking to protect digital
+              assets.
+            </p>
           </div>
         </div>
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-orange-500 transition-all duration-300 overflow-hidden" style="box-shadow: 0 4px 6px rgba(0,0,0,0.1)">
-          <img src="../img/cloudcomputing.png" alt="Cloud Computing" class="w-full h-64 object-cover"/>
+        <div
+          class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-orange-500 transition-all duration-300 overflow-hidden"
+          style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)"
+        >
+          <img
+            src="../img/cloudcomputing.png"
+            alt="Cloud Computing"
+            class="w-full h-48 sm:h-56 md:h-64 object-cover"
+          />
           <div class="p-6">
-          <h3 class="text-2xl font-bold text-gray-800 mb-3">Cloud Computing</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Explore cloud services and architecture with hands-on experience in
-            AWS, Azure, and Google Cloud Platform for scalable solutions.
-          </p>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Cloud Computing
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Explore cloud services and architecture with hands-on experience
+              in AWS, Azure, and Google Cloud Platform for scalable solutions.
+            </p>
           </div>
         </div>
       </div>
 
-      <button class="mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-300 ml-180">Explore More</button>
+      <button
+        class="mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-300 mx-auto block"
+      >
+        Explore More
+      </button>
     </section>
 
-    <section class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-blue-600 font-['Poppins'] pt-15 pb-15 px-6">
-      <h2 class="text-4xl font-bold text-white mb-8 text-center">Why <span class="text-blue-700">Learn </span> With Us?</h2>
+    <section
+      class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-blue-600 font-['Poppins'] py-10 md:py-14 px-6"
+    >
+      <h2 class="text-4xl font-bold text-white mb-8 text-center">
+        Why <span class="text-blue-700">Learn </span> With Us?
+      </h2>
 
-      <div class="grid 1 grid-cols-3">
-        <div class="mr-7 "> 
-          <img src="./img/instructor.png" alt="Expert Instructors" class="mx-auto mt-10 w-30 h-auto" />
-          <h3 class="text-xl font-semibold text-center mt-4 text-white">Senior Instructors</h3>
-          <p class="text-center text-white mx-4 mt-3">Learn from Senior professionals with real-world experience and expertise in their fields.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <img
+            src="./img/instructor.png"
+            alt="Expert Instructors"
+            class="mx-auto mt-6 w-16 sm:w-20 h-auto"
+          />
+          <h3 class="text-xl font-semibold text-center mt-4 text-white">
+            Senior Instructors
+          </h3>
+          <p class="text-center text-white mx-4 mt-3">
+            Learn from Senior professionals with real-world experience and
+            expertise in their fields.
+          </p>
         </div>
         <div>
-          <img src="./img/project.png" alt="Hands-on Projects" class="mx-auto mt-10 w-30 h-auto" />
-          <h3 class="text-xl font-semibold text-center mt-4 text-white">Hands-on Projects</h3>
-          <p class="text-center text-white mx-4 mt-3">Engage in practical, hands-on projects that simulate real-world scenarios to enhance your learning experience.</p>
+          <img
+            src="./img/project.png"
+            alt="Hands-on Projects"
+            class="mx-auto mt-6 w-16 sm:w-20 h-auto"
+          />
+          <h3 class="text-xl font-semibold text-center mt-4 text-white">
+            Hands-on Projects
+          </h3>
+          <p class="text-center text-white mx-4 mt-3">
+            Engage in practical, hands-on projects that simulate real-world
+            scenarios to enhance your learning experience.
+          </p>
         </div>
 
         <div>
-          <img src="./img/flexible.png" alt="Flexible Learning" class="mx-auto mt-10 w-30 h-30" />
-          <h3 class="text-xl font-semibold text-center mt-4 text-white">Flexible Learning</h3>
-          <p class="text-center text-white mx-4 mt-2">Access course materials anytime, anywhere, and learn at your own pace with our flexible online platform.</p>
+          <img
+            src="./img/flexible.png"
+            alt="Flexible Learning"
+            class="mx-auto mt-6 w-16 sm:w-20 h-auto"
+          />
+          <h3 class="text-xl font-semibold text-center mt-4 text-white">
+            Flexible Learning
+          </h3>
+          <p class="text-center text-white mx-4 mt-2">
+            Access course materials anytime, anywhere, and learn at your own
+            pace with our flexible online platform.
+          </p>
         </div>
-
+      </div>
     </section>
-  </body>Signup
 
-
-  <footer class="bg-gradient-to-r from-indigo-900 to-blue-800 text-white py-16 mt-20" style="font-family: 'Poppins', sans-serif;">
-    <div class="max-wl ml-25">
-      <div class="grid grid-cols-4 gap-0.5 mb-12">
-        <div>
-          <div class="flex items-center gap-8 mb-4">
-            <img src="../img/nextgen.jpg" alt="Next Gen" width="50" height="50" class="rounded" />
-            <span class="text-lg font-bold">Next Gen</span>
+    <footer
+      class="bg-gradient-to-r from-indigo-900 to-blue-800 text-white py-16"
+      style="font-family: &quot;Poppins&quot;, sans-serif"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <div class="flex items-center gap-8 mb-4">
+              <img
+                src="../img/nextgen.jpg"
+                alt="Next Gen"
+                width="50"
+                height="50"
+                class="rounded"
+              />
+              <span class="text-lg font-bold">Next Gen</span>
+            </div>
+            <p class="text-white/80 text-base leading-relaxed">
+              Empowering students at CADT to learn, innovate, and showcase their
+              talents through hands-on projects and training.
+            </p>
           </div>
-          <p class="text-white/80 text-base leading-relaxed">Empowering students at CADT to learn, innovate, and showcase their talents through hands-on projects and training.</p>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Programs -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Programs</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >Cybersecurity</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >Cloud Computing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 text-base hover:text-cyan-300 transition"
+                  >DBMS</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-300">
+              Contact Us
+            </h3>
+            <p class="text-white/80 text-base mb-2">
+              2nd Bridge Prek Leap, National Road Number 6, Phnom Penh 12252
+            </p>
+            <p class="text-white/80 text-base mb-2">
+              Email: cadt_nextgen@cadt.com
+            </p>
+            <p class="text-white/80 text-base">Phone: +855 (23) 861-968</p>
+          </div>
         </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">Home</a></li>
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">About</a></li>
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">Courses</a></li>
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Programs -->
-        <div>
-          <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Programs</h3>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">Web Development</a></li>
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">Cybersecurity</a></li>
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">Cloud Computing</a></li>
-            <li><a href="#" class="text-white/80 text-base hover:text-cyan-300 transition">DBMS</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Contact Us</h3>
-          <p class="text-white/80 text-base mb-2"> 2nd Bridge Prek Leap, National Road Number 6, Phnom Penh 12252</p>
-          <p class="text-white/80 text-base mb-2"> Email: cadt_nextgen@cadt.com</p>
-          <p class="text-white/80 text-base">Phone: +855 (23) 861-968</p>
+        <!-- Bottom Info -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-white/60 text-sm gap-4"
+        >
+          <p>&copy; 2026 Next Gen. All rights reserved.</p>
+          <div class="flex gap-6 flex-wrap justify-center">
+            <a href="#" class="hover:text-cyan-300 hover:underline transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-cyan-300 hover:underline transition"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-cyan-300 hover:underline transition"
+              >Follow Us</a
+            >
+          </div>
         </div>
       </div>
-
-      <!-- Divider -->
-      <div class="h-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent mb-8"></div>
-
-      <!-- Bottom Info -->
-      <div class="flex flex-col md:flex-row justify-between items-center text-white/60 text-sm gap-4">
-        <p>&copy; 2026 Next Gen. All rights reserved.</p>
-        <div class="flex gap-6 flex-wrap justify-center">
-          <a href="#" class="hover:text-cyan-300 hover:underline transition">Privacy Policy</a>
-          <a href="#" class="hover:text-cyan-300 hover:underline transition">Terms of Service</a>
-          <a href="#" class="hover:text-cyan-300 hover:underline transition">Follow Us</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </body>
 </html>
