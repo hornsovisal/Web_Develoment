@@ -3,40 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caeser Cipher</title>
+    <title>Tab Switcher</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+
+    <!-- Play CDN Dasi UI -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css"
+    />
+
+    <script src="script.js" defer></script>
+    <style>
+      html {
+        background-color: white !important;
+        color: black !important;
+      }
+      .tab-checkbox {
+        display: none;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 1rem;
+        border-bottom: 2px solid #e5e7eb;
+        margin-bottom: 1rem;
+      }
+
+      .tab-label {
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+      }
+
+      .tab-label:hover {
+        background-color: #f3f4f6;
+      }
+
+      #tab1:checked ~ .tabs .tab-label-1,
+      #tab2:checked ~ .tabs .tab-label-2 {
+        border-bottom-color: #3b82f6;
+        color: #3b82f6;
+        font-weight: 600;
+        display: block;
+      }
+
+      #tab1:checked ~ .tabs label.tab-label-1,
+      #tab2:checked ~ .tabs label.tab-label-2 {
+        border-bottom: 3px solid #3b82f6;
+        color: #3b82f6;
+        font-weight: 600;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      #tab1:checked ~ .tab-content-1,
+      #tab2:checked ~ .tab-content-2 {
+        display: block;
+      }
+
+      .tab-panel {
+        padding: 1rem;
+        background-color: #f9fafb;
+        border-radius: 0.5rem;
+      }
+    </style>
   </head>
-  <body class="bg-white">
-    <div class="container py-5 app-wrap">
-      <h1 class="display-6 fw-semibold mb-3">Caesar Cipher</h1>
+  <body​ class="bg-white mt-10">
+    <div class="container mx-auto p-8">
+      <h2 class="text-2xl font-bold mb-6">Caesar Cipher</h2>
 
-      <!-- Tabs -->
-      <ul class="nav nav-tabs mb-4">
-        <li class="nav-item">
-          <button
-            class="nav-link active"
-            id="encryptTab"
-            type="button"
-            onclick="setMode('encrypt')"
-          >
-            Encrypt
-          </button>
-        </li>
-        <li class="nav-item">
-          <button
-            class="nav-link"
-            id="decryptTab"
-            type="button"
-            onclick="setMode('decrypt')"
-          >
-            Decrypt
-          </button>
-        </li>
-      </ul>
+      <!-- Hidden checkboxes for state management -->
+      <input type="radio" id="tab1" name="tabs" class="tab-checkbox" checked />
+      <input type="radio" id="tab2" name="tabs" class="tab-checkbox" />
 
+      <!-- Tab buttons -->
+      <div class="tabs">
+        <label for="tab1" class="tab-label tab-label-1">Encrypt</label>
+        <label for="tab2" class="tab-label tab-label-2">Decrypt</label>
+      </div>
+
+      <!-- Tab content -->
+      <div class="tab-content tab-content-1">
+        <div class="tab-panel">
+          <!-- Encrypt Form -->
+          <div id="encryptForm">
+            <div class="flex flex-row items-center mb-4">
+              <div class="flex flex-row items-center w-full mb-4">
+                <label class="col-sm-3 col-form-label form-label-left"
+                  >Plain Text:</label
+                >
+                <div class="flex-1">
+                  <input
+                    type="text"
+                    id="encPlain"
+                    class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 hover:border-gray-400 transition duration-200 ease-in-out"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-row items-center mb-4">
+              <label class="col-sm-3 col-form-label form-label-left"
+                >Shift:</label
+              >
+              <div class="flex-1">
+                <input
+                  type="number"
+                  id="encShift"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 hover:border-gray-400 transition duration-200 ease-in-out"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="flex flex-row items-start mb-4">
+              <label class="col-sm-3 col-form-label form-label-left"
+                >Cipher text:</label
+              >
+              <div class="flex-1">
+                <textarea
+                  id="encResult"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 hover:border-gray-400 transition duration-200 ease-in-out"
+                  rows="3"
+                  readonly
+                >
+              ..</textarea
+                >
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button
+                class="bg-blue-900 rounded-lg px-4 py-2 text-white"
+                onclick="runEncrypt()"
+              >
+                Encrypt
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content tab-content-2">
+        <div class="tab-panel">
+          <!-- Decrypt Form -->
+          <div id="decryptForm">
+            <div class="flex flex-row items-center mb-4">
+              <label
+                class="flex flex-row items-center w-1/4 col-form-label form-label-left"
+                >Cipher Text:</label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  id="decCipher"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 hover:border-gray-400 transition duration-200 ease-in-out"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="flex flex-row items-center mb-4">
+              <label
+                class="flex flex-row items-center w-1/4 col-form-label form-label-left"
+                >Shift:</label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="number"
+                  id="decShift"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 hover:border-gray-400 transition duration-200 ease-in-out"
+                  placeholder=""
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-row items-start mb-4">
+              <label
+                class="flex flex-row items-center w-1/4 col-form-label form-label-left"
+                >Plain text:</label
+              >
+              <div class="flex-1">
+                <textarea
+                  id="decResult"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 hover:border-gray-400 transition duration-200 ease-in-out"
+                  rows="3"
+                  readonly
+                >
+...</textarea
+                >
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button
+                class="bg-blue-900 rounded-lg px-4 py-2 text-white"
+                onclick="runDecrypt()"
+              >
+                Decrypt
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+  </body​>
 </html>

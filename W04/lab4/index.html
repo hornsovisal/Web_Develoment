@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4 Exercises</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+      header {
+        margin-bottom: 24px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+      p {
+        margin: 0;
+        color: #475569;
+      }
+      .grid {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .card h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .card a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .card a:hover {
+        text-decoration: underline;
+      }
+      .note {
+        margin-top: 16px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Lab 4 Exercises</h1>
+        <p>Select an exercise below.</p>
+      </header>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Exercise 1</h2>
+          <a href="ex1.js">Open Exercise 1</a>
+        </div>
+
+        <div class="card">
+          <h2>Exercise 2</h2>
+          <a href="ex2.js">Open Exercise 2</a>
+        </div>
+
+        <div class="card">
+          <h2>Exercise 3</h2>
+          <a href="ex3.js">Open Exercise 3</a>
+        </div>
+
+        <div class="card">
+          <h2>Exercise 4</h2>
+          <a href="ex4/index.html">Open Exercise 4</a>
+        </div>
+      </div>
+      </p>
+    </div>
+  </body>
+</html>
