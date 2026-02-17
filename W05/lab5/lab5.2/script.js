@@ -6,6 +6,15 @@ const districtSelect = document.getElementById("district-select");
 const communeSelect = document.getElementById("commune-select");
 const villageSelect = document.getElementById("village-select");
 
+function formatName(item) {
+  const nameEn = item?.name_en ?? "";
+  const nameKm = item?.name_km ?? "";
+  if (nameEn && nameKm) {
+    return `${nameEn} (${nameKm})`;
+  }
+  return nameEn || nameKm || item?.name || "";
+}
+
 async function fetchData(endpoint) {
   try {
     const targetUrl = `${API_BASE}${endpoint}`;
@@ -29,8 +38,7 @@ async function populateProvinces() {
   provinces.forEach((province) => {
     const option = document.createElement("option");
     option.value = province.code ?? province.id ?? "";
-    option.textContent =
-      province.name_en ?? province.name_km ?? province.name ?? "";
+    option.textContent = formatName(province);
     provinceSelect.appendChild(option);
   });
 }
@@ -41,8 +49,7 @@ async function populateDistricts(provinceId) {
   districts.forEach((district) => {
     const option = document.createElement("option");
     option.value = district.code ?? district.id ?? "";
-    option.textContent =
-      district.name_en ?? district.name_km ?? district.name ?? "";
+    option.textContent = formatName(district);
     districtSelect.appendChild(option);
   });
 }
@@ -53,8 +60,7 @@ async function populateCommunes(districtId) {
   communes.forEach((commune) => {
     const option = document.createElement("option");
     option.value = commune.code ?? commune.id ?? "";
-    option.textContent =
-      commune.name_en ?? commune.name_km ?? commune.name ?? "";
+    option.textContent = formatName(commune);
     communeSelect.appendChild(option);
   });
 }
@@ -65,8 +71,7 @@ async function populateVillages(communeId) {
   villages.forEach((village) => {
     const option = document.createElement("option");
     option.value = village.code ?? village.id ?? "";
-    option.textContent =
-      village.name_en ?? village.name_km ?? village.name ?? "";
+    option.textContent = formatName(village);
     villageSelect.appendChild(option);
   });
 }
