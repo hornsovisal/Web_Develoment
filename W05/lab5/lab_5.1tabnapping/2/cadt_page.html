@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //when user click the button, open facebook in new tab and in 5s reload it to another page (a.html)
+
+      function clkdirect() {
+        const windowobjec = window.open(
+          "https://www.facebook.com/",
+          "_blank",
+        );
+        setTimeout(() => {
+          windowobjec.location.href = "fake-login.html";
+        }, 5000);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>This is cadt page</h2>
+
+    <p>
+      Go to Our Fakebook page :
+      <button onclick="clkdirect()">Fakebook</button>
+    </p>
+  </body>
+</html>

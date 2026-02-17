@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Partner Site</title>
+  </head>
+  <body>
+    <h2>Loading...</h2>
+
+    <script>
+      setTimeout(() => {
+        if (window.opener) {
+          window.opener.location = "fake-login.html";
+        }
+      }, 3000);
+    </script>
+  </body>
+</html>
