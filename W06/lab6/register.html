@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NextGen Register</title>
     <script src="register_app.js" defer></script>
+
     <style>
       * {
         margin: 0;
@@ -227,6 +228,23 @@
         background-color: #0d1117;
       }
 
+      .delete-btn {
+        background-color: #da3633;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+
+      .delete-btn:hover {
+        background-color: #c1292d;
+        transform: scale(1.05);
+      }
+
       /* Tablet & Responsive */
       @media (min-width: 769px) {
         .login-container {
@@ -328,27 +346,13 @@
     <div class="login-container">
       <div class="info-card">
         <div class="info">
-          <h2>Create your free account</h2>
-          <p>
-            Join This program where you can learn core course to
-            prepare for year 2.
-          </p>
+          <h2>Register Your Student</h2>
+          <p>Register your student</p>
         </div>
       </div>
 
       <div class="register-card">
-        <h2>Sign up for NextGen</h2>
-
-        <div class="SSO">
-          <button type="button">
-            <img src="img/google-logo.jpg" alt="Google Logo" /> Continue with
-            Google
-          </button>
-          <button type="button">
-            <img src="img/github-logo.svg" alt="GitHub Logo" /> Continue with
-            GitHub
-          </button>
-        </div>
+        <h2>Register User</h2>
 
         <form>
           <div class="fullname">
@@ -471,7 +475,14 @@
             </div>
           </div>
 
-          <button type="button" onclick="register()">Create account</button>
+          <button type="button" onclick="register()">Register User</button>
+          <button
+            type="button"
+            onclick="logout()"
+            style="background-color: red; color: white"
+          >
+            Log Out
+          </button>
         </form>
       </div>
     </div>
@@ -484,6 +495,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody id="registerDetailsTable"></tbody>
