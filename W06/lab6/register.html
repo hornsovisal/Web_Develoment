@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextGen Register</title>
+    <script src="register_app.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica",
+          "Arial", sans-serif;
+        background-color: #0d1117;
+      }
+
+      .login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+        min-height: auto;
+      }
+
+      .info-card {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .info-card .logo img {
+        margin-bottom: 20px;
+        width: 120px;
+        height: 120px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .info-card h2 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .info-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #8b949e;
+      }
+
+      .register-card {
+        background-color: #ffffff;
+        padding: 30px 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .register-card h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .SSO {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .SSO button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #f6f8fa;
+        border: 1px solid #d0d7de;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .SSO button:hover {
+        background-color: #f3f4f6;
+        border-color: #f4b400;
+        transform: translateY(-2px);
+      }
+
+      .SSO button img {
+        height: 20px;
+        width: 20px;
+      }
+
+      .register-card form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .register-card label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .register-card input,
+      .register-card select {
+        border: 1px solid #d0d7de;
+        border-radius: 6px;
+        padding: 10px;
+        font-size: 14px;
+        transition: border-color 0.2s;
+        font-family: inherit;
+      }
+
+      .register-card input:focus,
+      .register-card select:focus {
+        outline: none;
+        border-color: #f4b400;
+        box-shadow: 0 0 0 2px rgba(244, 180, 0, 0.1);
+      }
+
+      .fullname {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .fullname .field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .register-card button[type="button"] {
+        background-color: #020f27;
+        color: white;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .register-card button[type="button"]:hover {
+        background-color: #f4b400;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      .input-programming-language {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .input-programming-language label {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      /* Table Styles */
+      #register-details {
+        margin-top: 40px;
+        padding: 20px;
+        color: white;
+      }
+
+      #register-details h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #161b22;
+        border: 1px solid #30363d;
+      }
+
+      .table thead {
+        background-color: #0d1117;
+      }
+
+      .table th {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #30363d;
+        font-weight: 600;
+        color: #e6edf3;
+      }
+
+      .table td {
+        padding: 12px;
+        border: 1px solid #30363d;
+        color: #c9d1d9;
+      }
+
+      .table tbody tr:hover {
+        background-color: #0d1117;
+      }
+
+      /* Tablet & Responsive */
+      @media (min-width: 769px) {
+        .login-container {
+          flex-direction: row;
+          gap: 50px;
+          padding: 30px;
+          justify-content: center;
+          min-height: 100vh;
+        }
+
+        .info-card {
+          max-width: 450px;
+          text-align: left;
+        }
+
+        .info-card .logo img {
+          margin-left: 0;
+        }
+
+        .register-card {
+          padding: 30px 50px;
+          max-width: 500px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .login-container {
+          flex-direction: column;
+          gap: 20px;
+          padding: 15px;
+        }
+
+        .info-card {
+          max-width: 100%;
+          text-align: center;
+        }
+
+        .info-card h2 {
+          font-size: 24px;
+        }
+
+        .register-card {
+          padding: 20px 15px;
+          max-width: 100%;
+        }
+
+        .fullname {
+          grid-template-columns: 1fr;
+        }
+
+        .table {
+          font-size: 12px;
+        }
+
+        .table th,
+        .table td {
+          padding: 8px;
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .register-card h2 {
+          font-size: 18px;
+        }
+
+        .info-card h2 {
+          font-size: 20px;
+        }
+
+        .info-card p {
+          font-size: 13px;
+        }
+
+        .register-card {
+          padding: 15px 10px;
+        }
+
+        .SSO button {
+          font-size: 12px;
+          padding: 10px;
+        }
+
+        .register-card input,
+        .register-card select,
+        .register-card button {
+          font-size: 14px;
+        }
+
+        .table th,
+        .table td {
+          padding: 6px;
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="info-card">
+        <div class="info">
+          <h2>Create your free account</h2>
+          <p>
+            Join Next gen engagement program where you can learn core course to
+            prepare for year 2.
+          </p>
+        </div>
+      </div>
+
+      <div class="register-card">
+        <h2>Sign up for NextGen</h2>
+
+        <div class="SSO">
+          <button type="button">
+            <img src="img/google-logo.jpg" alt="Google Logo" /> Continue with
+            Google
+          </button>
+          <button type="button">
+            <img src="img/github-logo.svg" alt="GitHub Logo" /> Continue with
+            GitHub
+          </button>
+        </div>
+
+        <form>
+          <div class="fullname">
+            <div class="field">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="confirm_password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="province">Province</label>
+            <select id="province" name="province" required>
+              <option value="">-- Select Province --</option>
+              <option value="Kandal">Kandal</option>
+              <option value="Phnom Penh">Phnom Penh</option>
+              <option value="Siem Reap">Siem Reap</option>
+              <option value="Battambang">Battambang</option>
+              <option value="Kampong Cham">Kampong Cham</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="dateofbirth">Date of Birth</label>
+            <input type="date" id="dateofbirth" name="dateofbirth" required />
+          </div>
+
+          <div class="field">
+            <label for="image-upload">Upload Profile Picture</label>
+            <input
+              type="file"
+              id="image-upload"
+              name="image-upload"
+              accept="image/*"
+            />
+          </div>
+
+          <div class="field">
+            <label>Preferred Programming Language</label>
+            <div class="input-programming-language">
+              <div>
+                <input
+                  type="checkbox"
+                  id="cpp"
+                  name="programming-language"
+                  value="C++"
+                />
+                <label for="cpp" style="margin: 0; font-weight: 400">C++</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="webdev"
+                  name="programming-language"
+                  value="Web Development"
+                />
+                <label for="webdev" style="margin: 0; font-weight: 400"
+                  >Web Development</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="python"
+                  name="programming-language"
+                  value="Python"
+                />
+                <label for="python" style="margin: 0; font-weight: 400"
+                  >Python</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <button type="button" onclick="register()">Create account</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="register-details">
+      <h2>Registration Details</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="registerDetailsTable"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
