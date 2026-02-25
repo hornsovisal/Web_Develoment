@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Hospital Landing Page</title>
+  </head>
+  <body>
+    <nav>
+      <nav>
+        <div class="navbar bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+          <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl font-bold" href="#">
+              <i class="fast mr-2"></i>PulsePoint CIS
+            </a>
+          </div>
+          <div class="flex-none gap-2">
+            <a href="#" class="btn btn-ghost">Home</a>
+            <a href="#" class="btn btn-ghost">Features</a>
+            <a href="login.html" class="btn btn-sm btn-outline btn-accent"
+              >Login</a
+            >
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <main class="pb-96">
+      <!-- Hero Section -->
+      <div class="py-16 bg-gradient-to-r from-blue-100 to-blue-300">
+        <div class="max-w-4xl mx-auto px-6">
+          <h1 class="text-5xl font-bold text-center text-blue-900 mb-6">
+            Welcome to Visal Hospital
+          </h1>
+          <p class="text-center text-lg text-gray-700 leading-relaxed">
+            Your trusted healthcare partner providing comprehensive medical
+            services, advanced clinical information systems, and exceptional
+            patient care. Experience world-class healthcare with our
+            cutting-edge technology and dedicated medical professionals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          Our Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-bold text-blue-600 mb-3">Emergency Care</h3>
+            <p class="text-gray-600">
+              24/7 emergency department with rapid response teams and advanced
+              trauma care.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-bold text-blue-600 mb-3">
+              Patient Monitoring
+            </h3>
+            <p class="text-gray-600">
+              Real-time patient monitoring systems with clinical decision
+              support technology.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-bold text-blue-600 mb-3">
+              Clinical Records
+            </h3>
+            <p class="text-gray-600">
+              Secure, integrated electronic health records system for seamless
+              healthcare delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-400">
+      <div class="max-w-7xl mx-auto px-6 py-8 mt-20">
+        <!-- Footer Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Hospital Info -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-cyan-300">
+              Visal Hospital
+            </h3>
+            <p class="text-white/80 text-base leading-relaxed">
+              Delivering exceptional healthcare services with advanced medical
+              technology and compassionate patient care.
+            </p>
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-cyan-300">
+              Contact Info
+            </h3>
+            <ul class="space-y-3 text-white/80">
+              <li class="flex items-start gap-2">
+                <span>123 Hospital Road, Phnom Penh 12000</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span>+855 (23) 888-9999</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span>info@visalhospital.com</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span>Emergency: +855 (855) 888-9911</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hospital Visit Hours -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-cyan-300">
+              Visit Hours
+            </h3>
+            <ul class="space-y-2 text-white/80 text-sm">
+              <li>
+                <p class="font-semibold text-cyan-200">General Clinic</p>
+                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                <p>Sat: 8:00 AM - 1:00 PM</p>
+              </li>
+              <li>
+                <p class="font-semibold text-cyan-200 mt-3">Emergency Dept</p>
+                <p>24/7 Open</p>
+              </li>
+              <li>
+                <p class="font-semibold text-cyan-200 mt-3">Specialists</p>
+                <p>By Appointment Only</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-cyan-300">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-white/80 hover:text-cyan-300 transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/80 hover:text-cyan-300 transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/80 hover:text-cyan-300 transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/80 hover:text-cyan-300 transition"
+                  >Appointments</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-white/20 pt-8"></div>
+
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-white/70 text-sm gap-4"
+        >
+          <p>&copy; 2026 Visal Hospital. All rights reserved.</p>
+          <div class="flex gap-6 flex-wrap justify-center">
+            <a href="#" class="hover:text-cyan-300 hover:underline transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-cyan-300 hover:underline transition"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-cyan-300 hover:underline transition"
+              >Patient Portal</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

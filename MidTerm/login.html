@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <!-- add our js file script -->
+    <script src="script.js" defer></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .input {
+        transition: all 0.3s ease;
+      }
+
+      .input:focus {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+      }
+
+      .btn {
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .fieldset {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl font-bold" href="#">
+            <i class="fast mr-2"></i>PulsePoint CIS
+          </a>
+        </div>
+        <div class="flex-none gap-2">
+          <a href="#" class="btn btn-ghost">Home</a>
+          <a href="#" class="btn btn-ghost">Features</a>
+          <a href="login.html" class="btn btn-sm btn-outline btn-accent"
+            >Login</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- This Login Form to Center -->
+    <main class="flex items-center justify-center min-h-screen px-4">
+      <fieldset
+        class="login-form fieldset bg-white border-2 border-gray-200 rounded-2xl w-full max-w-md p-8 shadow-2xl"
+      >
+        <legend class="fieldset-legend text-2xl font-bold px-4">Login</legend>
+
+        <!-- Role Selction Drop Down -->
+        <label class="label mt-4">
+          <span class="label-text text-base font-medium">Select Role</span>
+        </label>
+        <select
+          id="role"
+          class="select select-bordered w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+        >
+          <option disabled selected>Select your role</option>
+          <option value="Practitioner">Practitioner</option>
+          <option value="Admin">Admin</option>
+          <option value="Nurse">Nurse</option>
+        </select>
+        <!-- Drop Down Practioner ID -->
+        <label class="label mt-4">
+          <span class="label-text text-base font-medium">Practitioner ID</span>
+        </label>
+        <select
+          id="practitioner-id"
+          class="select select-bordered w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+        >
+          <option disabled selected>Select your Practitioner ID</option>
+          <option value="practitioner1">Practitioner 1</option>
+          <option value="practitioner2">Practitioner 2</option>
+          <option value="practitioner3">Practitioner 3</option>
+        </select>
+
+        <label class="label mt-4">
+          <span class="label-text text-base font-medium">Password</span>
+        </label>
+        <input
+          type="password"
+          id="password"
+          class="input input-bordered w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          placeholder="Enter your password"
+        />
+
+        <!-- Visibility Password  button -->
+        <div class="flex items-center mt-4">
+          <input type="checkbox" class="toggle" />
+          <span class="ml-2 text-sm text-gray-600">Show Password</span>
+        </div>
+
+        <div id="password-strength" class="text-sm font-semibold mt-2"></div>
+
+        <button
+          id="login-btn"
+          class="btn btn-primary w-full mt-6 text-white font-semibold bg-black"
+        >
+          Login
+        </button>
+      </fieldset>
+    </main>
+  </body>
+</html>
