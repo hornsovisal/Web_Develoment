@@ -111,7 +111,4 @@ window.addEventListener("load", function () {
   if (currentPage.endsWith("admin.html") && activeRole !== "Admin") {
     window.location.href = "error.html";
   }
-
-  // Dashboard (index.html) is accessible to all authenticated users
-  // No additional check needed here since we already verified activeRole exists above
 });
